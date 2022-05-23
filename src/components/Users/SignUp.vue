@@ -12,7 +12,8 @@
 </template>
 
 <script>
-import {EventBus} from '@/main.js'
+import { EventBus } from '@/main.js'
+import { mapMutations } from 'vuex'
 
 export default {
   data() {
@@ -25,6 +26,7 @@ export default {
     }
   },
   methods: {
+    ...mapMutations(['addUsers']),
     signUp() {
       let userObj = {
         userId: this.userId,
@@ -33,7 +35,11 @@ export default {
         address: this.address,
         src: this.src
       }
-      EventBus.$emit('signUp', userObj)
+      // ...mapMutations 안쓰고 commit 쓰는 방법
+      // this.$store.commit('addUsers', userObj)
+
+      this.addUsers(userObj)
+      // EventBus.$emit('signUp', userObj)
       this.clearForm()
     },
     clearForm() {
@@ -43,6 +49,7 @@ export default {
         this.address = null,
         this.src = null
     }
+
   }
 }
 </script>

@@ -15,7 +15,7 @@
 
         <v-list-tile-content>
           <v-list-tile-title v-html="user.name"></v-list-tile-title>
-          <v-list-tile-sub-title>id:#{{index}} / {{user.address}} 거주</v-list-tile-sub-title>
+          <v-list-tile-sub-title>id:#{{ index }} / {{ user.address }} 거주</v-list-tile-sub-title>
         </v-list-tile-content>
       </v-list-tile>
     </v-list>
@@ -24,29 +24,27 @@
 </template>
 
 <script>
-import { EventBus } from '@/main.js'
-import { mapState, mapGetters } from 'vuex'
+import {EventBus} from '@/main.js'
+import {mapState, mapGetters} from 'vuex'
 
-  export default {
-    data() {
-      return {
-
-      }
-    },
-    computed: {
-/*     객체로 쓰는 방법 (count, seouls, percent 로 바인딩 해줘야한다.)
-        ...mapGetters({
-        count: 'allUsersCount',
-        seouls: 'countOfSeoul',
-        percent: 'percentOfSeoul'
-      })*/
-      ...mapState(['allUsers']),
-      ...mapGetters(['allUsersCount', 'countOfSeoul', 'percentOfSeoul'])
-    },
-    mounted() {
-      EventBus.$on('signUp', users => {
-        this.allUsers.push(users)
-      })
-    }
+export default {
+  data() {
+    return {}
+  },
+  computed: {
+  /*  객체로 쓰는 방법 (count, seouls, percent 로 바인딩 해줘야한다.)
+      ...mapGetters({
+      count: 'allUsersCount',
+      seouls: 'countOfSeoul',
+      percent: 'percentOfSeoul'
+    })*/
+    ...mapState(['allUsers']),
+    ...mapGetters(['allUsersCount', 'countOfSeoul', 'percentOfSeoul'])
+  },
+  mounted() {
+    EventBus.$on('signUp', users => {
+      this.allUsers.push(users)
+    })
   }
+}
 </script>

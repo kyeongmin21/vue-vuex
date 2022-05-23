@@ -39,3 +39,17 @@
   ...mapState(['allUsers'])로 배열로 받아와서 사용할 수 있다.
 * 직관적으로 사용 + 가독성 
 
+
+### Store - mutations : Vuex 의 데이터, 즉 state 값을 변경하는 로직들을 의미
+* computed 가 아닌 methods 에 등록
+* commit 을 이용하여 state 를 변경
+* Mutations 는 동기적 로직을 정의
+* mutations 안에 addUsers 가 singUp 파일에서 실행이 될텐데,<br>
+  form 안에 작성된 값들을 같이 넘겨 줘야함.
+* addUsers(state, payload) 인자값을 넘겨주자
+* singUp 파일에서 mapMutations 임폴트해서 methods 안에 ...mapMutations(['addUsers']) 써준다.
+* payload는 this.addUsers(userObj) 의 userOb j이다!
+
+### Store - mutations : commit 사용
+
+
