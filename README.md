@@ -14,4 +14,15 @@
   signUp 버튼 클릭하면 userObj 객체를 이벤트 버스로 보냄, 초깃값 메서드도 만들어 준다.
 * EventBus > main.js 에 설정
 
-### 
+
+### Store - State : vue 인스턴스의 data 역할
+* AllUser 의 data 부분을 store.js 의 state 에 넣어준다.
+* main.js 파일에 vue를 설정할 때 store를 선택했기 때문에 store가 셋팅 되어 있음.
+* import store가 vue 인스턴스를 생성할 때 이 안에서 하나의 값으로 들어가 있음
+* AllUser 파일안에서 data를 가져왔으니, allUsers 적힌 것 부분에 <br>
+  store 에서 값을 가져 와야하니깐 allUsers => $store.state.allUsers 로 변경한다.
+  
+
+### Store - Getters : 각 컴포넌트의 계산된 속성 (computed) 의 공통 속성으로 정의
+* $store.getters.allUsersCount 로 사용한다.
+* 주의할 점 allUsersCount(state) 매개변수를 state 로 적어줘야 한다.
