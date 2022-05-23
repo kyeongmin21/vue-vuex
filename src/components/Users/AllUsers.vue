@@ -34,6 +34,12 @@ import { mapGetters } from 'vuex'
       }
     },
     computed: {
+/*     객체로 쓰는 방법 (count, seouls, percent 로 바인딩 해줘야한다.)
+        ...mapGetters({
+        count: 'allUsersCount',
+        seouls: 'countOfSeoul',
+        percent: 'percentOfSeoul'
+      })*/
       ...mapGetters(['allUsersCount', 'countOfSeoul', 'percentOfSeoul'])
     },
     mounted() {

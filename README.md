@@ -31,4 +31,5 @@
 * import { mapGetters } from 'vuex' 임폴트 먼저 한다
 * computed 속성안에 ...mapGetters(['', '', '' ]) 배열로 String을 써준다.
 * 그러고 $state.getters 를 지우고 메서드만 써주면 된다!
+* 객체로 받아 올 수도 있음
 
