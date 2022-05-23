@@ -26,3 +26,9 @@
 ### Store - Getters : 각 컴포넌트의 계산된 속성 (computed) 의 공통 속성으로 정의
 * $store.getters.allUsersCount 로 사용한다.
 * 주의할 점 allUsersCount(state) 매개변수를 state 로 적어줘야 한다.
+* $store.getters 가 중복으로 너무 길게 쓰여지는 문제가 있다.
+* ...mapGetters 를 사용해보자!
+* import { mapGetters } from 'vuex' 임폴트 먼저 한다
+* computed 속성안에 ...mapGetters(['', '', '' ]) 배열로 String을 써준다.
+* 그러고 $state.getters 를 지우고 메서드만 써주면 된다!
+
