@@ -14,6 +14,18 @@ export default new Vuex.Store({
   getters: { // computed (computed 와 다른점은 사용하는 값을 쓰기 위해서는 state를 사용할 거라고 function 한테 알려줘야함 ! )
     allUsersCount (state) {
       return state.allUsers.length
+    },
+    countOfSeoul: state => {
+      let count = 0
+      state.allUsers.forEach(user => {
+        if (user.address == 'Seoul') {
+          count += 1
+        }
+      })
+      return count
+    },
+    percentOfSeoul: (state, getters) => {
+      return Math.round(getters.countOfSeoul / getters.allUsersCount * 100)
     }
   },
   mutations: {
