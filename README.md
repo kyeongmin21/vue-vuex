@@ -50,6 +50,17 @@
 * singUp 파일에서 mapMutations 임폴트해서 methods 안에 ...mapMutations(['addUsers']) 써준다.
 * payload는 this.addUsers(userObj) 의 userOb j이다!
 
+### Store - mutations : ...mapMutations 사용
+* addUsers 라는 함수를 하나 만들고 인자를 (state, payload) 받는다.
+* state 값을 변화시키는 거니깐, 앞에는 state를 적고
+* form 에서 넘겨준 값을 받을 수 있도록 payload 를 적는다.
+* SignUp.vue 파일에서 vuex의 ...mapMutations 임폴트하기
+* methods 안에 ...mapMutations(['addUsers']) 배열로 불러오기
+* addUsers 를 선언된 함수로 쓸수 있음.
+* this.addUsers(userObj)  여기서 userObj = payload 이다!
+
 ### Store - mutations : commit 사용
+* 
+
 
 
