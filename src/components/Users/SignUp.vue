@@ -13,7 +13,7 @@
 
 <script>
 import { EventBus } from '@/main.js'
-import { mapMutations } from 'vuex'
+import { mapMutations, mapActions } from 'vuex'
 
 export default {
   data() {
@@ -26,7 +26,8 @@ export default {
     }
   },
   methods: {
-    ...mapMutations(['addUsers']),
+    // ...mapMutations(['addUsers']),
+    ...mapActions(['addUsers']),
     signUp() {
       let userObj = {
         userId: this.userId,
@@ -35,17 +36,21 @@ export default {
         address: this.address,
         src: this.src
       }
-      // ...mapMutations 안쓰고 commit 쓰는 방법
+      // mutations - commit 불러오는 방법
       // this.$store.commit('addUsers', userObj)
 
-      // ...mapMutations 를 불러오는 방법
+      // mutations - ...mapMutations 불러오는 방법
       // this.addUsers(userObj)
 
       // EventBus 로 쓰는 방법
       // EventBus.$emit('signUp', userObj)
 
-      // actions 를 불러오는 방법
-      this.$store.dispatch('addUsers', userObj)
+      // actions - dispatch 불러오는 방법
+      // this.$store.dispatch('addUsers', userObj)
+
+      // actions - ...mapActions 불러오는 방법
+      this.addUsers(userObj)
+
       this.clearForm()
     },
     clearForm() {
