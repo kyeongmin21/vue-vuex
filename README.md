@@ -66,5 +66,9 @@
 * userObj = payload 
 * addUsers 를 실행시킬건데, userObj 를 인자로 받아서 보내줘! 라는 뜻이다.
 
+### Store - actions : 비동기 로직
+* 
+
+
 
 

@@ -38,8 +38,14 @@ export default {
       // ...mapMutations 안쓰고 commit 쓰는 방법
       // this.$store.commit('addUsers', userObj)
 
-      this.addUsers(userObj)
+      // ...mapMutations 를 불러오는 방법
+      // this.addUsers(userObj)
+
+      // EventBus 로 쓰는 방법
       // EventBus.$emit('signUp', userObj)
+
+      // actions 를 불러오는 방법
+      this.$store.dispatch('addUsers', userObj)
       this.clearForm()
     },
     clearForm() {
