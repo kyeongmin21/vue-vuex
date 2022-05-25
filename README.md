@@ -60,7 +60,11 @@
 * this.addUsers(userObj)  여기서 userObj = payload 이다!
 
 ### Store - mutations : commit 사용
-* 
+* ...mapMutations 다 지우기
+* this.$store.commit('addUsers', userObj)
+* mutation 이름 써주기 : addUsers 
+* userObj = payload 
+* addUsers 를 실행시킬건데, userObj 를 인자로 받아서 보내줘! 라는 뜻이다.
 
 
 
