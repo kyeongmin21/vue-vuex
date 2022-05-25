@@ -66,8 +66,14 @@
 * userObj = payload 
 * addUsers 를 실행시킬건데, userObj 를 인자로 받아서 보내줘! 라는 뜻이다.
 
-### Store - actions : 비동기 로직
-* 
+### Store - actions : ...mapActions 사용
+* ...mapActions vuex 임폴트하기
+* ...maActions(['addUsers']) 배열로 불러오기
+* this.addUser(userObj) 값 넘겨주기
+
+### Store - actions : dispatch 사용
+* ...mapActions 다 지우기
+* this.$store.dispatch('addUsers', userObj) 로 넘겨주기
 
 
 
