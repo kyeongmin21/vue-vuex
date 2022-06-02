@@ -18,7 +18,7 @@ export default new Vuex.Store({
         countOfSeoul: state => {
             let count = 0
             state.allUsers.forEach(user => {
-                if (user.address == 'Seoul') {
+                if (user.address === 'Seoul') {
                     count += 1
                 }
             })
