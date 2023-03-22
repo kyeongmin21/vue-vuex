@@ -11,5 +11,6 @@ export const EventBus = new Vue()
 new Vue({
   router,
   store,
+  EventBus,
   render: h => h(App)
 }).$mount('#app')
