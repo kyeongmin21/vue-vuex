@@ -2,7 +2,7 @@
   <div>
     <h1>All Users ({{ allUsersCount }})</h1>
     <h3>Seoul Users: {{ countOfSeoul }}</h3>
-    <h3>Seoul Users Persent: {{ percentOfSeoul }}%</h3>
+    <h3>Seoul Users Percent: {{ percentOfSeoul }}%</h3>
     <v-list two-line>
       <v-list-tile
         v-for="(user, index) in allUsers"
