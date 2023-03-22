@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import {EventBus} from '@/main.js'
+import {EventBus} from '../../main'
 import {mapState, mapGetters} from 'vuex'
 
 export default {
